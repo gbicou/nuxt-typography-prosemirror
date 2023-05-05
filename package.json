@@ -1,0 +1,26 @@
+{
+  "name": "@bicou/nuxt-typography-prosemirror",
+  "type": "module",
+  "version": "0.0.1",
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "dev": "nuxi dev .playground",
+    "build": "nuxt build .playground",
+    "generate": "nuxt generate .playground",
+    "preview": "nuxt preview .playground",
+    "lint": "eslint .",
+    "postinstall": "nuxt prepare .playground"
+  },
+  "devDependencies": {
+    "@nuxt-themes/tokens": "^1.9.1",
+    "@nuxt/eslint-config": "^0.1.1",
+    "eslint": "^8.39.0",
+    "nuxt": "^3.4.3",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@nuxt-themes/typography": "^0.11.0",
+    "@vueuse/nuxt": "^10.1.2",
+    "prosemirror-model": "^1.19.0"
+  }
+}
