@@ -2,6 +2,10 @@
   "private": true,
   "name": "@bicou/nuxt-typography-prosemirror-playground",
   "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview"
   },
   "dependencies": {
     "@bicou/nuxt-typography-prosemirror": "workspace:*"
