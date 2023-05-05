@@ -61,8 +61,45 @@
         {
           "type": "text",
           "from": 45,
+          "to": 67,
+          "text": ". Sure, there are all "
+        },
+        {
+          "type": "text",
+          "from": 67,
+          "to": 71,
+          "marks": [
+            {
+              "type": "code"
+            }
+          ],
+          "text": "kind"
+        },
+        {
+          "type": "text",
+          "from": 71,
+          "to": 139,
+          "text": " of basic text styles you’d probably expect from a text editor. But "
+        },
+        {
+          "type": "text",
+          "from": 139,
+          "to": 143,
+          "marks": [
+            {
+              "type": "bold"
+            },
+            {
+              "type": "italic"
+            }
+          ],
+          "text": "wait"
+        },
+        {
+          "type": "text",
+          "from": 143,
           "to": 168,
-          "text": ". Sure, there are all kind of basic text styles you’d probably expect from a text editor. But wait until you see the lists:"
+          "text": " until you see the lists:"
         }
       ]
     },
