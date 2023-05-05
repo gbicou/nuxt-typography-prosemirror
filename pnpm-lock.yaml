@@ -1,32 +1,40 @@
 lockfileVersion: '6.0'
 
-dependencies:
-  '@nuxt-themes/typography':
-    specifier: ^0.11.0
-    version: 0.11.0(postcss@8.4.23)(rollup@3.21.5)(vue@3.2.47)
-  '@vueuse/nuxt':
-    specifier: ^10.1.2
-    version: 10.1.2(nuxt@3.4.2)(rollup@3.21.5)(vue@3.2.47)
-  prosemirror-model:
-    specifier: ^1.19.0
-    version: 1.19.0
+importers:
 
-devDependencies:
-  '@nuxt-themes/tokens':
-    specifier: ^1.9.1
-    version: 1.9.1(postcss@8.4.23)(rollup@3.21.5)(vue@3.2.47)
-  '@nuxt/eslint-config':
-    specifier: ^0.1.1
-    version: 0.1.1(eslint@8.39.0)
-  eslint:
-    specifier: ^8.39.0
-    version: 8.39.0
-  nuxt:
-    specifier: 3.4.2
-    version: 3.4.2(@types/node@18.16.4)(eslint@8.39.0)(rollup@3.21.5)(typescript@5.0.4)
-  typescript:
-    specifier: ^5.0.4
-    version: 5.0.4
+  .:
+    dependencies:
+      '@nuxt-themes/typography':
+        specifier: ^0.11.0
+        version: 0.11.0(postcss@8.4.23)(rollup@3.21.5)(vue@3.2.47)
+      '@vueuse/nuxt':
+        specifier: ^10.1.2
+        version: 10.1.2(nuxt@3.4.2)(rollup@3.21.5)(vue@3.2.47)
+      prosemirror-model:
+        specifier: ^1.19.0
+        version: 1.19.0
+    devDependencies:
+      '@nuxt-themes/tokens':
+        specifier: ^1.9.1
+        version: 1.9.1(postcss@8.4.23)(rollup@3.21.5)(vue@3.2.47)
+      '@nuxt/eslint-config':
+        specifier: ^0.1.1
+        version: 0.1.1(eslint@8.39.0)
+      eslint:
+        specifier: ^8.39.0
+        version: 8.39.0
+      nuxt:
+        specifier: 3.4.2
+        version: 3.4.2(@types/node@18.16.4)(eslint@8.39.0)(rollup@3.21.5)(typescript@5.0.4)
+      typescript:
+        specifier: ^5.0.4
+        version: 5.0.4
+
+  playground:
+    dependencies:
+      '@bicou/nuxt-typography-prosemirror':
+        specifier: workspace:*
+        version: link:..
 
 packages:
 

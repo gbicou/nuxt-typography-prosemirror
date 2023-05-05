@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "@bicou/nuxt-typography-prosemirror-playground",
+  "scripts": {
+  },
+  "dependencies": {
+    "@bicou/nuxt-typography-prosemirror": "workspace:*"
+  },
+  "devDependencies": {
+  }
+}
