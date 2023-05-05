@@ -11,5 +11,6 @@
     "@bicou/nuxt-typography-prosemirror": "workspace:*"
   },
   "devDependencies": {
+    "@nuxt-themes/tokens": "^1.9.1"
   }
 }

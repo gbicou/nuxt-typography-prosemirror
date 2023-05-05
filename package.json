@@ -12,7 +12,6 @@
     "postinstall": "nuxt prepare playground"
   },
   "devDependencies": {
-    "@nuxt-themes/tokens": "^1.9.1",
     "@nuxt/eslint-config": "^0.1.1",
     "eslint": "^8.39.0",
     "nuxt": "3.4.2",

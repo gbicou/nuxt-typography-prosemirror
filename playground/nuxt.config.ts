@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  extends: '..',
+  extends: '@bicou/nuxt-typography-prosemirror',
   modules: [
     "@nuxt-themes/tokens"
   ],

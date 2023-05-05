@@ -14,9 +14,6 @@ importers:
         specifier: ^1.19.0
         version: 1.19.0
     devDependencies:
-      '@nuxt-themes/tokens':
-        specifier: ^1.9.1
-        version: 1.9.1(postcss@8.4.23)(rollup@3.21.5)(vue@3.2.47)
       '@nuxt/eslint-config':
         specifier: ^0.1.1
         version: 0.1.1(eslint@8.39.0)
@@ -35,6 +32,10 @@ importers:
       '@bicou/nuxt-typography-prosemirror':
         specifier: workspace:*
         version: link:..
+    devDependencies:
+      '@nuxt-themes/tokens':
+        specifier: ^1.9.1
+        version: 1.9.1(postcss@8.4.23)(rollup@3.21.5)(vue@3.2.47)
 
 packages:
 
