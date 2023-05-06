@@ -1,35 +1,48 @@
-import { h, resolveComponent, Text } from 'vue'
-import {JsonNode} from "../../prosemirror.schema";
+import { h, resolveComponent } from "vue";
+import { JsonNode } from "../../prosemirror.schema";
 
 interface ProseMirrorNodeProps {
-  node: JsonNode
-  markIndex?: number
+  // curent prosemirror node
+  node: JsonNode;
+  // mark index to render
+  mark?: number;
 }
 
 const ProseMirrorNode = defineComponent<ProseMirrorNodeProps>({
   name: "ProseMirrorNode",
-  props: ['node', 'markIndex'] as unknown as undefined,
-  setup(props, { slots, attrs, emit }) {
+  props: ["node", "mark"] as unknown as undefined,
+  setup(props /*, { slots, attrs, emit }*/) {
+    const markIndex = props.mark ?? 0;
 
-    const markIndex = props.markIndex ?? 0
-    const mark = props.node.marks?.at(markIndex)
-
+    // point to the mark
+    const mark = props.node.marks?.at(markIndex);
     if (mark !== undefined) {
-      const markComponent = resolveComponent('prose-mirror-' + mark.type)
-      return () => h(markComponent, { node: props.node, mark }, () => h(
-        ProseMirrorNode, { node: props.node, markIndex: markIndex + 1 }
-      ))
+      const markComponent = resolveComponent("prose-mirror-" + mark.type);
+      // render the current mark
+      return () =>
+        h(
+          markComponent,
+          { node: props.node, mark },
+          // recurse the next mark for child
+          () => h(ProseMirrorNode, { node: props.node, mark: markIndex + 1 })
+        );
     }
 
+    // render text as is
     if (props.node.type == "text") {
-      return () => props.node.text
+      return () => props.node.text;
     }
-    const proseComponent = resolveComponent('prose-mirror-' + props.node.type)
-    return () =>  h(proseComponent, {
-      ...props
-      }, () => props.node.content?.map((child) => h(ProseMirrorNode, { node: child }))
-    )
- }
-})
+
+    // render the current node when marks are done
+    const proseComponent = resolveComponent("prose-mirror-" + props.node.type);
+    return () =>
+      h(
+        proseComponent,
+        props,
+        // node content build the children
+        () => props.node.content?.map((child) => h(ProseMirrorNode, { node: child }))
+      );
+  },
+});
 
 export default ProseMirrorNode;

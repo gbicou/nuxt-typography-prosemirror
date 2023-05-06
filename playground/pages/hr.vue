@@ -9,7 +9,10 @@ import data from "../proses/hr.json";
     <section id="render">
       <prose-mirror-node :node="data" />
     </section>
-    <section id="data"><p>Source:</p><pre>{{ data }}</pre></section>
+    <section id="data">
+      <p>Source:</p>
+      <pre>{{ data }}</pre>
+    </section>
   </div>
 </template>
 
@@ -17,10 +20,9 @@ import data from "../proses/hr.json";
 #split {
   display: flex;
   > section {
-
     &#render {
       width: 60ch;
-      margin: 0 $dt('space.16');
+      margin: 0 $dt("space.16");
     }
 
     &#data {
@@ -28,7 +30,7 @@ import data from "../proses/hr.json";
         max-width: 120ch;
         max-height: 80vh;
         overflow: scroll;
-        font-size: $dt('fontSize.xs');
+        font-size: $dt("fontSize.xs");
       }
     }
   }

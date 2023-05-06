@@ -5,12 +5,10 @@
 </template>
 
 <script setup lang="ts">
-import {JsonNode} from "../../prosemirror.schema";
+import { JsonNode } from "../../prosemirror.schema";
 import { hash } from "ohash";
 
-const props = defineProps<{ node: JsonNode }>()
+const props = defineProps<{ node: JsonNode }>();
 
-const h = hash(props.node)
+const h = hash(props.node);
 </script>
-
-

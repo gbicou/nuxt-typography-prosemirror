@@ -1,4 +1,4 @@
-import {MarkSpec, NodeSpec, Schema} from "prosemirror-model";
+import { MarkSpec, NodeSpec, Schema } from "prosemirror-model";
 
 export interface JsonMark {
   type: string;
@@ -13,17 +13,15 @@ export interface JsonNode {
   attrs?: Record<string, any>;
 }
 
-
 interface NuxtNodeSpec extends NodeSpec {
-  component: string
+  component: string;
 }
 
 interface NuxtMarkSpec extends MarkSpec {
-  component: string
+  component: string;
 }
 
 const nodes = {
-
   /// An inline image (`<img>`) node. Supports `src`,
   /// `alt`, and `href` attributes. The latter two default to the empty
   /// string.
@@ -31,15 +29,14 @@ const nodes = {
     inline: true,
     attrs: {
       src: {},
-      alt: {default: null},
-      title: {default: null}
+      alt: { default: null },
+      title: { default: null },
     },
     group: "inline",
     draggable: true,
     component: "Image",
   } as NuxtNodeSpec,
-
-}
+};
 
 const marks = {
   /// A link. Has `href` and `title` attributes. `title`
@@ -48,12 +45,11 @@ const marks = {
   link: {
     attrs: {
       href: {},
-      title: {default: null}
+      title: { default: null },
     },
     inclusive: false,
-    component: "Link"
+    component: "Link",
   } as NuxtMarkSpec,
+};
 
-}
-
-export const schema = new Schema({nodes, marks})
+export const schema = new Schema({ nodes, marks });

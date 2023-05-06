@@ -5,8 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import {JsonNode} from "../../prosemirror.schema";
-import {hash} from "ohash";
+import { JsonNode } from "../../prosemirror.schema";
+import { hash } from "ohash";
 
-defineProps<{ node: JsonNode }>()
+defineProps<{ node: JsonNode }>();
 </script>
