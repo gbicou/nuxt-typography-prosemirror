@@ -3,6 +3,6 @@
 </template>
 
 <script setup lang="ts">
-import { JsonNode } from "../../prosemirror.schema";
+import { JsonNode } from "../../types";
 defineProps<{ node: JsonNode }>();
 </script>

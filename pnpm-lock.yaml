@@ -10,9 +10,6 @@ importers:
       '@vueuse/nuxt':
         specifier: ^10.1.2
         version: 10.1.2(nuxt@3.4.2)(rollup@3.21.5)(vue@3.2.47)
-      prosemirror-model:
-        specifier: ^1.19.0
-        version: 1.19.0
     devDependencies:
       '@nuxt/eslint-config':
         specifier: ^0.1.1
@@ -3957,10 +3954,6 @@ packages:
       strip-ansi: 7.0.1
       wcwidth: 1.0.1
 
-  /orderedmap@2.1.0:
-    resolution: {integrity: sha512-/pIFexOm6S70EPdznemIz3BQZoJ4VTFrhqzu0ACBqBgeLsLxq8e6Jim63ImIfwW/zAD1AlXpRMlOv3aghmo4dA==}
-    dev: false
-
   /os-tmpdir@1.0.2:
     resolution: {integrity: sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==}
     engines: {node: '>=0.10.0'}
@@ -4468,12 +4461,6 @@ packages:
     dependencies:
       kleur: 3.0.3
       sisteransi: 1.0.5
-
-  /prosemirror-model@1.19.0:
-    resolution: {integrity: sha512-/CvFGJnwc41EJSfDkQLly1cAJJJmBpZwwUJtwZPTjY2RqZJfM8HVbCreOY/jti8wTRbVyjagcylyGoeJH/g/3w==}
-    dependencies:
-      orderedmap: 2.1.0
-    dev: false
 
   /protocols@2.0.1:
     resolution: {integrity: sha512-/XJ368cyBJ7fzLMwLKv1e4vLxOju2MNAIokcr7meSaNcVbWz/CPcW22cP04mwxOErdA5mwjA8Q6w/cdAQxVn7Q==}

@@ -9,13 +9,15 @@
     </section>
   </div>
 </template>
+
 <script setup lang="ts">
-import { JsonNode } from "../../prosemirror.schema";
+import { JsonNode } from "../../types";
 
 defineProps<{
-  doc: JsonNode
-}>()
+  doc: JsonNode;
+}>();
 </script>
+
 <style scoped lang="postcss">
 #split {
   display: flex;

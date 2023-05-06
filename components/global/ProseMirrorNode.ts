@@ -1,5 +1,5 @@
 import { h, resolveComponent } from "vue";
-import { JsonNode } from "../../prosemirror.schema";
+import { JsonNode } from "../../types";
 
 interface ProseMirrorNodeProps {
   // curent prosemirror node

@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { JsonMark, JsonNode } from "../../prosemirror.schema";
+import { JsonMark, JsonNode } from "../../types";
 import { hash } from "ohash";
 defineProps<{ node: JsonNode; mark: JsonMark }>();
 </script>
