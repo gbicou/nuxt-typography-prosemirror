@@ -7,6 +7,7 @@
     <router-link to="/uniqid">UniqID</router-link>
     <router-link to="/codeblock">CodeBlock</router-link>
     <router-link to="/ol">OrderedList</router-link>
+    <router-link to="/link">Link</router-link>
   </nav>
   <nuxt-page class="page" />
 </template>
