@@ -1,5 +1,5 @@
 <template>
-  <component :is="`prose-h${level}`" :id="hash(node)" v-bind="$attrs"><slot /></component>
+  <component :is="`prose-h${level}`" :id="hash(node)" v-bind="node.attrs"><slot /></component>
 </template>
 
 <script setup lang="ts">

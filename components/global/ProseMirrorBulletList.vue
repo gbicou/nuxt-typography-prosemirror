@@ -1,5 +1,5 @@
 <template>
-  <prose-ul :id="hash(node)">
+  <prose-ul :id="hash(node)" v-bind="node.attrs">
     <slot />
   </prose-ul>
 </template>

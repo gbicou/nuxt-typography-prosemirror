@@ -1,5 +1,5 @@
 <template>
-  <prose-blockquote :id="hash(node)">
+  <prose-blockquote :id="hash(node)" v-bind="node.attrs">
     <slot />
   </prose-blockquote>
 </template>

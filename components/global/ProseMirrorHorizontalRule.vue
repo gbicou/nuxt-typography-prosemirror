@@ -1,5 +1,5 @@
 <template>
-  <hr />
+  <hr v-bind="node.attrs" />
 </template>
 
 <script setup lang="ts">

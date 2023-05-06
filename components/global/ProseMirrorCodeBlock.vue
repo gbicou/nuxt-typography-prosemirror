@@ -1,6 +1,6 @@
 <template>
-  <prose-code :id="hash(node)">
-    <pre><slot /></pre>
+  <prose-code :id="hash(node)" v-bind="node.attrs">
+    <pre><code><slot /></code></pre>
   </prose-code>
 </template>
 

@@ -1,0 +1,107 @@
+{
+  "type": "doc",
+  "from": 0,
+  "to": 84,
+  "content": [
+    {
+      "type": "orderedList",
+      "from": 0,
+      "to": 36,
+      "attrs": {
+        "start": 1
+      },
+      "content": [
+        {
+          "type": "listItem",
+          "from": 1,
+          "to": 16,
+          "content": [
+            {
+              "type": "paragraph",
+              "from": 2,
+              "to": 15,
+              "content": [
+                {
+                  "type": "text",
+                  "from": 3,
+                  "to": 14,
+                  "text": "A list item"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "from": 16,
+          "to": 35,
+          "content": [
+            {
+              "type": "paragraph",
+              "from": 17,
+              "to": 34,
+              "content": [
+                {
+                  "type": "text",
+                  "from": 18,
+                  "to": 33,
+                  "text": "And another one"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "orderedList",
+      "from": 36,
+      "to": 82,
+      "attrs": {
+        "start": 5
+      },
+      "content": [
+        {
+          "type": "listItem",
+          "from": 37,
+          "to": 62,
+          "content": [
+            {
+              "type": "paragraph",
+              "from": 38,
+              "to": 61,
+              "content": [
+                {
+                  "type": "text",
+                  "from": 39,
+                  "to": 60,
+                  "text": "This item starts at 5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "from": 62,
+          "to": 81,
+          "content": [
+            {
+              "type": "paragraph",
+              "from": 63,
+              "to": 80,
+              "content": [
+                {
+                  "type": "text",
+                  "from": 64,
+                  "to": 79,
+                  "text": "And another one"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

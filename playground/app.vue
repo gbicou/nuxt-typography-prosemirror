@@ -3,6 +3,10 @@
     <router-link to="/">Index</router-link>
     <router-link to="/example">Example</router-link>
     <router-link to="/hr">HR</router-link>
+    <router-link to="/image">Image</router-link>
+    <router-link to="/uniqid">UniqID</router-link>
+    <router-link to="/codeblock">CodeBlock</router-link>
+    <router-link to="/ol">OrderedList</router-link>
   </nav>
   <nuxt-page class="page" />
 </template>
@@ -28,3 +32,5 @@ body {
   min-height: 100vh;
 }
 </style>
+<script setup>
+</script>

@@ -1,5 +1,5 @@
 <template>
-  <div :id="h">
+  <div :id="h" v-bind="node.attrs">
     <slot />
   </div>
 </template>

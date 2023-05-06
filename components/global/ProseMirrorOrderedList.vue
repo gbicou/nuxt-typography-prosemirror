@@ -1,7 +1,7 @@
 <template>
-  <prose-li :id="hash(node)" v-bind="node.attrs">
+  <prose-ol :id="hash(node)" v-bind="node.attrs">
     <slot />
-  </prose-li>
+  </prose-ol>
 </template>
 
 <script setup lang="ts">
