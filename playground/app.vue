@@ -8,6 +8,7 @@
     <router-link to="/codeblock">CodeBlock</router-link>
     <router-link to="/ol">OrderedList</router-link>
     <router-link to="/link">Link</router-link>
+    <router-link to="/table">Table</router-link>
   </nav>
   <nuxt-page class="page" />
 </template>
