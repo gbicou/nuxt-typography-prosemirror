@@ -1,5 +1,6 @@
 import { h, resolveComponent } from "vue";
 import type { JsonNode } from "../../types";
+import { hash } from "ohash";
 
 interface ProseMirrorNodeProps {
   // curent prosemirror node
@@ -12,17 +13,22 @@ const ProseMirrorNode = defineComponent<ProseMirrorNodeProps>({
   name: "ProseMirrorNode",
   props: ["node", "mark"] as unknown as undefined,
   setup(props /*, { slots, attrs, emit }*/) {
+    const {
+      typographyProsemirror: { typeMap },
+    } = useAppConfig();
+
     const markIndex = props.mark ?? 0;
 
     // point to the mark
     const mark = props.node.marks?.at(markIndex);
     if (mark !== undefined) {
-      const markComponent = resolveComponent("prose-mirror-" + mark.type);
+      const componentName = typeMap[mark.type] ?? "prose-mirror-" + mark.type;
+      const markComponent = resolveComponent(componentName);
       // render the current mark
       return () =>
         h(
           markComponent,
-          { node: props.node, mark },
+          { id: hash(mark), ...mark.attrs },
           // recurse the next mark for child
           () => h(ProseMirrorNode, { node: props.node, mark: markIndex + 1 })
         );
@@ -34,11 +40,12 @@ const ProseMirrorNode = defineComponent<ProseMirrorNodeProps>({
     }
 
     // render the current node when marks are done
-    const proseComponent = resolveComponent("prose-mirror-" + props.node.type);
+    const componentName = typeMap[props.node.type] ?? "prose-mirror-" + props.node.type;
+    const proseComponent = resolveComponent(componentName);
     return () =>
       h(
         proseComponent,
-        props,
+        { id: hash(props.node), ...props.node.attrs },
         // node content build the children
         () => props.node.content?.map((child) => h(ProseMirrorNode, { node: child }))
       );
