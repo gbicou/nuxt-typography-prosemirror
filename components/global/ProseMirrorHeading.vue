@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { JsonNode } from "../../types";
+import type { JsonNode } from "../../types";
 import { hash } from "ohash";
 
 const props = defineProps<{ node: JsonNode }>();
