@@ -16,22 +16,26 @@
 
 <script setup lang="ts">
 import type { JsonNode } from "../../types";
-import { Editor, EditorContent, useEditor } from "@tiptap/vue-3";
+import { EditorContent, useEditor } from "@tiptap/vue-3";
 import StarterKit from "@tiptap/starter-kit";
 
-const doc = ref<JsonNode | null>(null)
+const doc = ref<JsonNode | null>(null);
 
 const editor = useEditor({
   content: doc.value,
-  extensions: [
-    StarterKit,
-  ],
+  extensions: [StarterKit],
   onUpdate: () => {
     doc.value = editor.value?.getJSON();
-  }
-})
-
+  },
+});
 </script>
+
+<style lang="postcss">
+.ProseMirror {
+  min-height: 300px;
+  overflow-y: auto;
+}
+</style>
 
 <style scoped lang="postcss">
 #split {
@@ -50,7 +54,6 @@ const editor = useEditor({
     }
     &#editor {
       min-width: 80ch;
-      min-height: 60ch;
     }
   }
 }
