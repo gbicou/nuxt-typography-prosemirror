@@ -9,6 +9,7 @@
     <router-link to="/ol">OrderedList</router-link>
     <router-link to="/link">Link</router-link>
     <router-link to="/table">Table</router-link>
+    <router-link to="/tiptap">TipTap</router-link>
   </nav>
   <nuxt-page class="page" />
 </template>
@@ -34,3 +35,5 @@ body {
   min-height: 100vh;
 }
 </style>
+<script setup>
+</script>

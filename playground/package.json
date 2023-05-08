@@ -8,7 +8,10 @@
     "preview": "nuxi preview"
   },
   "dependencies": {
-    "@bicou/nuxt-typography-prosemirror": "workspace:*"
+    "@bicou/nuxt-typography-prosemirror": "workspace:*",
+    "@tiptap/pm": "^2.0.3",
+    "@tiptap/starter-kit": "^2.0.3",
+    "@tiptap/vue-3": "^2.0.3"
   },
   "devDependencies": {
     "@nuxt-themes/tokens": "^1.9.1"
