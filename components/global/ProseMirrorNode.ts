@@ -28,9 +28,11 @@ const ProseMirrorNode = defineComponent<ProseMirrorNodeProps>({
       if (markItem.value) {
         const componentName = typeMap[markItem.value.type] ?? "prose-mirror-" + markItem.value.type;
         const markComponent = resolveComponent(componentName);
+        const markProps = { ...markItem.value.attrs };
+        markProps.id ??= hash(markItem.value);
         return h(
           markComponent,
-          { id: hash(markItem.value), ...markItem.value.attrs },
+          markProps,
           // recurse the next mark for child
           () => h(ProseMirrorNode, { node: node.value, mark: markIndex.value + 1 })
         );
@@ -43,9 +45,11 @@ const ProseMirrorNode = defineComponent<ProseMirrorNodeProps>({
       else {
         const componentName = typeMap[node.value.type] ?? "prose-mirror-" + node.value.type;
         const proseComponent = resolveComponent(componentName);
+        const proseProps = { ...node.value.attrs };
+        proseProps.id ??= hash(node.value);
         return h(
           proseComponent,
-          { id: hash(node.value), ...node.value.attrs },
+          proseProps,
           // node content build the children
           () => node.value.content?.map((child) => h(ProseMirrorNode, { node: child }))
         );
