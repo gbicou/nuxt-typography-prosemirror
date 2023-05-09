@@ -1,4 +1,4 @@
-import { h, resolveComponent } from "vue";
+import { h, resolveComponent, toRefs } from "vue";
 import type { JsonNode } from "../../types";
 import { hash } from "ohash";
 
@@ -17,38 +17,40 @@ const ProseMirrorNode = defineComponent<ProseMirrorNodeProps>({
       typographyProsemirror: { typeMap },
     } = useAppConfig();
 
-    const markIndex = props.mark ?? 0;
+    const { node, mark } = toRefs(props);
 
     // point to the mark
-    const mark = props.node.marks?.at(markIndex);
-    if (mark !== undefined) {
-      const componentName = typeMap[mark.type] ?? "prose-mirror-" + mark.type;
-      const markComponent = resolveComponent(componentName);
+    const markIndex = computed(() => mark.value ?? 0);
+    const markItem = computed(() => node.value.marks?.at(markIndex.value));
+
+    return () => {
       // render the current mark
-      return () =>
-        h(
+      if (markItem.value) {
+        const componentName = typeMap[markItem.value.type] ?? "prose-mirror-" + markItem.value.type;
+        const markComponent = resolveComponent(componentName);
+        return h(
           markComponent,
-          { id: hash(mark), ...mark.attrs },
+          { id: hash(markItem.value), ...markItem.value.attrs },
           // recurse the next mark for child
-          () => h(ProseMirrorNode, { node: props.node, mark: markIndex + 1 })
+          () => h(ProseMirrorNode, { node: node.value, mark: markIndex.value + 1 })
         );
-    }
-
-    // render text as is
-    if (props.node.type == "text") {
-      return () => props.node.text;
-    }
-
-    // render the current node when marks are done
-    const componentName = typeMap[props.node.type] ?? "prose-mirror-" + props.node.type;
-    const proseComponent = resolveComponent(componentName);
-    return () =>
-      h(
-        proseComponent,
-        { id: hash(props.node), ...props.node.attrs },
-        // node content build the children
-        () => props.node.content?.map((child) => h(ProseMirrorNode, { node: child }))
-      );
+      }
+      // render text as is
+      else if (node.value.type === "text") {
+        return node.value.text;
+      }
+      // render the current node when marks are done
+      else {
+        const componentName = typeMap[node.value.type] ?? "prose-mirror-" + node.value.type;
+        const proseComponent = resolveComponent(componentName);
+        return h(
+          proseComponent,
+          { id: hash(node.value), ...node.value.attrs },
+          // node content build the children
+          () => node.value.content?.map((child) => h(ProseMirrorNode, { node: child }))
+        );
+      }
+    };
   },
 });
 
