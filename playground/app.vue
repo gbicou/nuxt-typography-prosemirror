@@ -36,5 +36,3 @@ body {
   min-height: 100vh;
 }
 </style>
-<script setup>
-</script>

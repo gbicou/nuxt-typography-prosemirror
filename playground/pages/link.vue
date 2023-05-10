@@ -5,4 +5,3 @@ import doc from "../proses/link.json";
 <template>
   <proses-example :doc="doc" />
 </template>
-
