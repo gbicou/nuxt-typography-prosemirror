@@ -4,40 +4,66 @@
       <prose-mirror-node v-if="doc" :node="doc" />
     </section>
     <section id="data">
-      <p>Source:</p>
-      <pre>{{ doc }}</pre>
+      <p>State:</p>
+      <pre>{{ state }}</pre>
     </section>
     <section id="editor">
       <p>Editor:</p>
-      <editor-content v-if="editor" :editor="editor" />
+      <div id="pm-editor" />
+      <div id="content" style="display: none">
+        <p>test</p>
+      </div>
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { JsonNode } from "../../types";
-import { EditorContent, useEditor } from "@tiptap/vue-3";
-import StarterKit from "@tiptap/starter-kit";
+
+import { EditorState } from "prosemirror-state";
+import { EditorView } from "prosemirror-view";
+import { Schema, DOMParser } from "prosemirror-model";
+import { schema } from "prosemirror-schema-basic";
+import { addListNodes } from "prosemirror-schema-list";
+import { exampleSetup } from "prosemirror-example-setup";
+
+import "prosemirror-view/style/prosemirror.css";
+import "prosemirror-menu/style/menu.css";
+import "prosemirror-example-setup/style/style.css";
+
+const mySchema = new Schema({
+  nodes: addListNodes(schema.spec.nodes, "paragraph block*", "block"),
+  marks: schema.spec.marks,
+});
 
 const doc = ref<JsonNode | null>(null);
 
-const editor = useEditor({
-  content: doc.value,
-  extensions: [StarterKit],
-  onUpdate: () => {
-    doc.value = editor.value?.getJSON();
-  },
+let state: EditorState = EditorState.create({
+  schema: mySchema,
+  plugins: exampleSetup({ schema: mySchema }),
 });
+let view: EditorView | null = null;
+
+onMounted(() => {
+  view = new EditorView(document.querySelector("#pm-editor"), {
+    state: state,
+    dispatchTransaction: (transaction) => {
+      state = state.apply(transaction);
+      view?.updateState(state);
+      doc.value = state.doc.toJSON();
+    },
+  });
+});
+
+onUnmounted(() => view?.destroy());
 </script>
 
 <style lang="postcss">
 .ProseMirror {
+  padding: 0.8rem;
+
   min-height: 300px;
   overflow-y: auto;
-
-  background-clip: padding-box;
-  border-radius: 4px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
 
   > * + * {
     margin-top: 0.75em;
@@ -113,6 +139,13 @@ const editor = useEditor({
     &#editor {
       padding: 0 $dt("space.8");
       min-width: 80ch;
+
+      #pm-editor {
+        background-clip: padding-box;
+        border-radius: 4px;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        padding: 5px 0 0;
+      }
     }
   }
 }

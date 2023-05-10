@@ -11,7 +11,8 @@
     "@bicou/nuxt-typography-prosemirror": "workspace:*",
     "@tiptap/pm": "^2.0.3",
     "@tiptap/starter-kit": "^2.0.3",
-    "@tiptap/vue-3": "^2.0.3"
+    "@tiptap/vue-3": "^2.0.3",
+    "prosemirror-example-setup": "^1.2.1"
   },
   "devDependencies": {
     "@nuxt-themes/tokens": "^1.9.1"

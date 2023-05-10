@@ -10,6 +10,7 @@
     <router-link to="/link">Link</router-link>
     <router-link to="/table">Table</router-link>
     <router-link to="/tiptap">TipTap</router-link>
+    <router-link to="/editor">ProseMirror</router-link>
   </nav>
   <nuxt-page class="page" />
 </template>
