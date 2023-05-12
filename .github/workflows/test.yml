@@ -5,7 +5,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - uses: ./install.yml
+      - uses: .github/workflows/install.yml
 
       - name: Test
         run: pnpm test
