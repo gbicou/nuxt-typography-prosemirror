@@ -36,7 +36,8 @@
           "to": 27,
           "marks": [
             {
-              "type": "italic"
+              "type": "italic",
+              "attrs": { "data-testid": "italic" }
             }
           ],
           "text": "basic"
@@ -53,7 +54,8 @@
           "to": 45,
           "marks": [
             {
-              "type": "bold"
+              "type": "bold",
+              "attrs": { "data-testid": "bold" }
             }
           ],
           "text": "tiptap"
