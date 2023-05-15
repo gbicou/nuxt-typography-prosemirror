@@ -29,5 +29,5 @@
     "@nuxt-themes/typography": "^0.11.0",
     "@vueuse/nuxt": "^10.1.2"
   },
-  "packageManager": "pnpm@8.5.0"
+  "packageManager": "pnpm@8.5.1"
 }
