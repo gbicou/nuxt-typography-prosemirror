@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import doc from "../proses/image.json";
+import json from "../proses/image.json";
 </script>
 
 <template>
-  <proses-example :doc="doc" />
+  <proses-example :json="json" />
 </template>

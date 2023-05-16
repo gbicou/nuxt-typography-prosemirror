@@ -1,7 +1,7 @@
 export default defineAppConfig({
   typographyProsemirror: {
     typeMap: {
-      // doc: "ProseMirrorDoc",
+      doc: "ProseMirrorDocument",
       paragraph: "ProseP",
       code: "ProseCodeInline",
       code_block: "ProseMirrorCodeBlock",

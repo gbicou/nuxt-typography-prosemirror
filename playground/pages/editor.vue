@@ -1,7 +1,7 @@
 <template>
   <div id="split">
     <section id="render">
-      <prose-mirror-node v-if="doc" :node="doc" />
+      <prose-mirror-node v-if="json" :node="json" />
     </section>
     <section id="data">
       <p>State:</p>
@@ -36,13 +36,13 @@ const mySchema = new Schema({
   marks: schema.spec.marks,
 });
 
-const doc = ref<JsonNode | null>(null);
+const json = ref<JsonNode | false>(false);
 
 let state: EditorState = EditorState.create({
   schema: mySchema,
   plugins: exampleSetup({ schema: mySchema }),
 });
-let view: EditorView | null = null;
+let view: EditorView | undefined;
 
 onMounted(() => {
   view = new EditorView(document.querySelector("#pm-editor"), {
@@ -50,7 +50,7 @@ onMounted(() => {
     dispatchTransaction: (transaction) => {
       state = state.apply(transaction);
       view?.updateState(state);
-      doc.value = state.doc.toJSON();
+      json.value = state.doc.toJSON();
     },
   });
 });

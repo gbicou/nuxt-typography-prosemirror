@@ -1,11 +1,11 @@
 <template>
   <div id="split">
     <section id="render">
-      <prose-mirror-node v-if="doc" :node="doc" />
+      <prose-mirror-node v-if="json" :node="json" />
     </section>
     <section id="data">
       <p>Source:</p>
-      <pre>{{ doc }}</pre>
+      <pre>{{ json }}</pre>
     </section>
     <section id="editor">
       <p>Editor:</p>
@@ -19,13 +19,13 @@ import type { JsonNode } from "../../types";
 import { EditorContent, useEditor } from "@tiptap/vue-3";
 import StarterKit from "@tiptap/starter-kit";
 
-const doc = ref<JsonNode | null>(null);
+const json = ref<JsonNode | false>(false);
 
 const editor = useEditor({
-  content: doc.value,
+  // content: json.value,
   extensions: [StarterKit],
   onUpdate: () => {
-    doc.value = editor.value?.getJSON();
+    json.value = editor.value?.getJSON() as JsonNode;
   },
 });
 </script>

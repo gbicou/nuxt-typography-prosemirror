@@ -2,22 +2,22 @@ import { h, resolveComponent, toRefs } from "vue";
 import type { JsonNode } from "../../types";
 import { hash } from "ohash";
 
-interface ProseMirrorNodeProps {
+interface ProseMirrorNodeProperties {
   // curent prosemirror node
   node: JsonNode;
   // mark index to render
   mark?: number;
 }
 
-const ProseMirrorNode = defineComponent<ProseMirrorNodeProps>({
+const ProseMirrorNode = defineComponent<ProseMirrorNodeProperties>({
   name: "ProseMirrorNode",
   props: ["node", "mark"] as unknown as undefined,
-  setup(props /*, { slots, attrs, emit }*/) {
+  setup(properties /*, { slots, attrs, emit }*/) {
     const {
       typographyProsemirror: { typeMap },
     } = useAppConfig();
 
-    const { node, mark } = toRefs(props);
+    const { node, mark } = toRefs(properties);
 
     // point to the mark
     const markIndex = computed(() => mark.value ?? 0);
@@ -28,11 +28,11 @@ const ProseMirrorNode = defineComponent<ProseMirrorNodeProps>({
       if (markItem.value) {
         const componentName = typeMap[markItem.value.type] ?? "prose-mirror-" + markItem.value.type;
         const markComponent = resolveComponent(componentName);
-        const markProps = { ...markItem.value.attrs };
-        markProps.id ??= hash(markItem.value);
+        const markProperties = { ...markItem.value.attrs };
+        markProperties.id ??= hash(markItem.value);
         return h(
           markComponent,
-          markProps,
+          markProperties,
           // recurse the next mark for child
           () => h(ProseMirrorNode, { node: node.value, mark: markIndex.value + 1 })
         );
@@ -45,11 +45,11 @@ const ProseMirrorNode = defineComponent<ProseMirrorNodeProps>({
       else {
         const componentName = typeMap[node.value.type] ?? "prose-mirror-" + node.value.type;
         const proseComponent = resolveComponent(componentName);
-        const proseProps = { ...node.value.attrs };
-        proseProps.id ??= hash(node.value);
+        const proseProperties = { ...node.value.attrs };
+        proseProperties.id ??= hash(node.value);
         return h(
           proseComponent,
-          proseProps,
+          proseProperties,
           // node content build the children
           () => node.value.content?.map((child) => h(ProseMirrorNode, { node: child }))
         );

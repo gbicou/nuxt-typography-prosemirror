@@ -1,11 +1,11 @@
 <template>
   <div id="split">
     <section id="render">
-      <prose-mirror-node :node="doc" />
+      <prose-mirror-node :node="json" />
     </section>
     <section id="data">
       <p>Source:</p>
-      <pre>{{ doc }}</pre>
+      <pre>{{ json }}</pre>
     </section>
   </div>
 </template>
@@ -14,7 +14,7 @@
 import type { JsonNode } from "../../types";
 
 defineProps<{
-  doc: JsonNode;
+  json: JsonNode;
 }>();
 </script>
 
