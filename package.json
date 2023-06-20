@@ -17,7 +17,8 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "postinstall": "nuxt prepare playground"
+    "postinstall": "nuxt prepare playground",
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
