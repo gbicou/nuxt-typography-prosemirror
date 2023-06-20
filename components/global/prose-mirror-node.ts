@@ -1,6 +1,7 @@
 import { h, resolveComponent, toRefs } from "vue";
 import type { JsonNode } from "../../types";
 import { hash } from "ohash";
+import { snakeCase, paramCase } from "change-case";
 
 interface ProseMirrorNodeProperties {
   // curent prosemirror node
@@ -26,7 +27,7 @@ const ProseMirrorNode = defineComponent<ProseMirrorNodeProperties>({
     return () => {
       // render the current mark
       if (markItem.value) {
-        const componentName = typeMap[markItem.value.type] ?? "prose-mirror-" + markItem.value.type;
+        const componentName = typeMap[snakeCase(markItem.value.type)] ?? "prose-mirror-" + paramCase(markItem.value.type);
         const markComponent = resolveComponent(componentName);
         const markProperties = { ...markItem.value.attrs };
         markProperties.id ??= hash(markItem.value);
@@ -43,7 +44,7 @@ const ProseMirrorNode = defineComponent<ProseMirrorNodeProperties>({
       }
       // render the current node when marks are done
       else {
-        const componentName = typeMap[node.value.type] ?? "prose-mirror-" + node.value.type;
+        const componentName = typeMap[snakeCase(node.value.type)] ?? "prose-mirror-" + paramCase(node.value.type);
         const proseComponent = resolveComponent(componentName);
         const proseProperties = { ...node.value.attrs };
         proseProperties.id ??= hash(node.value);

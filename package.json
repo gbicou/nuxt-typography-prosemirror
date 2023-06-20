@@ -28,7 +28,8 @@
   },
   "dependencies": {
     "@nuxt-themes/typography": "^1.0.0",
-    "@vueuse/nuxt": "^10.2.0"
+    "@vueuse/nuxt": "^10.2.0",
+    "change-case": "^4.1.2"
   },
   "packageManager": "pnpm@8.6.3"
 }
