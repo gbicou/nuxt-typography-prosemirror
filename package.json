@@ -6,8 +6,8 @@
   "files": [
     "nuxt.config.ts",
     "components",
-    "app.config",
-    "types"
+    "app.config.ts",
+    "types.ts"
   ],
   "scripts": {
     "dev": "nuxi dev playground",
