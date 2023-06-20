@@ -2,6 +2,10 @@
   "name": "@bicou/nuxt-typography-prosemirror",
   "type": "module",
   "version": "0.0.2",
+  "homepage": "https://github.com/gbicou/nuxt-typography-prosemirror",
+  "author": "Benjamin VIELLARD <bicou@bicou.com>",
+  "license": "MIT",
+  "repository": "github:gbicou/nuxt-typography-prosemirror",
   "main": "./nuxt.config.ts",
   "files": [
     "nuxt.config.ts",

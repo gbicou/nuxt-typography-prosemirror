@@ -17,5 +17,5 @@
   "devDependencies": {
     "@nuxt-themes/tokens": "^2.0.0"
   },
-  "version": null
+  "version": "0.0.1"
 }
