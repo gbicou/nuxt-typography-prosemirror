@@ -49,6 +49,7 @@ const ProseMirrorNode = defineComponent<ProseMirrorNodeProperties>({
         const componentName = typeMap[nodeType] ?? "prose-mirror-" + paramCase(node.value.type);
         const proseComponent = resolveComponent(componentName);
         const proseProperties = { ...node.value.attrs };
+        proseProperties.node = node.value;
         proseProperties.id ??= hash(node.value);
         return h(
           proseComponent,
