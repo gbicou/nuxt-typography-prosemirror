@@ -5,4 +5,7 @@ module.exports = {
     "plugin:unicorn/recommended",
     "plugin:prettier/recommended"
   ],
+  parserOptions: {
+    warnOnUnsupportedTypeScriptVersion: false,
+  }
 };
