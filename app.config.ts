@@ -20,6 +20,7 @@ export default defineAppConfig({
       table_header: "prose-th",
       table_cell: "prose-td",
     },
+    shiki: false,
   },
 });
 
@@ -28,6 +29,12 @@ declare module "@nuxt/schema" {
     typographyProsemirror?: {
       /** Map node types to component names */
       typeMap?: Record<string, string>;
+      /** Use shiki code highlighter for code block, requires shiki-es to be installed as dependencies */
+      shiki?:
+        | false
+        | {
+            theme: string;
+          };
     };
   }
 }
