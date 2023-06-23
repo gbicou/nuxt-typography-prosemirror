@@ -1,12 +1,8 @@
 {
   "type": "doc",
-  "from": 0,
-  "to": 133,
   "content": [
     {
       "type": "heading",
-      "from": 0,
-      "to": 32,
       "attrs": {
         "id": "1ee40b3c-7dfe-4bf0-87a8-b639d553cbe9",
         "level": 1
@@ -14,40 +10,30 @@
       "content": [
         {
           "type": "text",
-          "from": 1,
-          "to": 31,
           "text": "This is a very unique heading."
         }
       ]
     },
     {
       "type": "paragraph",
-      "from": 32,
-      "to": 111,
       "attrs": {
         "id": "334b8458-326e-42f7-b0f7-8ddd21b51159"
       },
       "content": [
         {
           "type": "text",
-          "from": 33,
-          "to": 110,
           "text": "This is a unique paragraph. It’s so unique, it even has an ID attached to it."
         }
       ]
     },
     {
       "type": "paragraph",
-      "from": 111,
-      "to": 131,
       "attrs": {
         "id": "adcf8c7c-06ea-47a7-8a44-648e9d200879"
       },
       "content": [
         {
           "type": "text",
-          "from": 112,
-          "to": 130,
           "text": "And this one, too."
         }
       ]

@@ -1,47 +1,24 @@
 {
   "type": "doc",
-  "from": 0,
-  "to": 367,
   "content": [
     {
       "type": "paragraph",
-      "from": 0,
-      "to": 60,
       "content": [
         {
           "type": "text",
-          "from": 1,
-          "to": 59,
           "text": "That’s a boring paragraph followed by a fenced code block:"
         }
       ]
     },
     {
       "type": "codeBlock",
-      "from": 60,
-      "to": 264,
       "attrs": {
         "language": "javascript"
       },
       "content": [
         {
           "type": "text",
-          "from": 61,
-          "to": 263,
           "text": "for (var i=1; i <= 20; i++)\n{\n  if (i % 15 == 0)\n    console.log(\"FizzBuzz\");\n  else if (i % 3 == 0)\n    console.log(\"Fizz\");\n  else if (i % 5 == 0)\n    console.log(\"Buzz\");\n  else\n    console.log(i);\n}"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "from": 264,
-      "to": 365,
-      "content": [
-        {
-          "type": "text",
-          "from": 265,
-          "to": 364,
-          "text": "Press Command/Ctrl + Enter to leave the fenced code block and continue typing in boring paragraphs."
         }
       ]
     }
