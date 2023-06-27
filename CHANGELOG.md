@@ -1,5 +1,11 @@
 # @bicou/nuxt-typography-prosemirror
 
+## 0.0.5
+
+### Patch Changes
+
+- [`be0cf76`](https://github.com/gbicou/nuxt-typography-prosemirror/commit/be0cf76ef1e3159c7b578a988049914013d8591c) Thanks [@gbicou](https://github.com/gbicou)! - upgrade nuxt to version 3.6
+
 ## 0.0.4
 
 ### Patch Changes
