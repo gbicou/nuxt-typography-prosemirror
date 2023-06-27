@@ -21,7 +21,7 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "postinstall": "nuxt prepare playground",
+    "prepare": "nuxt prepare playground",
     "release": "changeset publish"
   },
   "dependencies": {

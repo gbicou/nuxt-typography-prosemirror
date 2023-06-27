@@ -5,7 +5,8 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "generate": "nuxi generate",
-    "preview": "nuxi preview"
+    "preview": "nuxi preview",
+    "prepare": "nuxt prepare"
   },
   "dependencies": {
     "@bicou/nuxt-typography-prosemirror": "workspace:*",
