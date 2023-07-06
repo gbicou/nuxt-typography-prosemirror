@@ -1,5 +1,5 @@
 <template>
-  <prose-code v-bind="$attrs">
+  <prose-code v-bind="$attrs" :code="code">
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div v-if="shikiEnable && shikiHtml" v-html="shikiHtml" />
     <pre v-else><code><slot /></code></pre>
