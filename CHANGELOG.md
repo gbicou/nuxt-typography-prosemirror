@@ -1,5 +1,11 @@
 # @bicou/nuxt-typography-prosemirror
 
+## 0.0.7
+
+### Patch Changes
+
+- [`aeee054`](https://github.com/gbicou/nuxt-typography-prosemirror/commit/aeee054d0a27df5e407db9cf9136ae5504c87dbb) Thanks [@gbicou](https://github.com/gbicou)! - fix(code-block): copy button
+
 ## 0.0.6
 
 ### Patch Changes
