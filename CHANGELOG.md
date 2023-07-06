@@ -1,5 +1,15 @@
 # @bicou/nuxt-typography-prosemirror
 
+## 0.0.6
+
+### Patch Changes
+
+- [#21](https://github.com/gbicou/nuxt-typography-prosemirror/pull/21) [`85f082f`](https://github.com/gbicou/nuxt-typography-prosemirror/commit/85f082ff8eb71c07dd76112e0b006fde23bb6f0b) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency happy-dom to v10
+
+- [`c14a66a`](https://github.com/gbicou/nuxt-typography-prosemirror/commit/c14a66acc16c461a482c8ce938cb933df10f8aae) Thanks [@gbicou](https://github.com/gbicou)! - chore(deps): upgrade dependencies
+
+- [#19](https://github.com/gbicou/nuxt-typography-prosemirror/pull/19) [`2e30170`](https://github.com/gbicou/nuxt-typography-prosemirror/commit/2e301708cd009bef34c480bbde4c6ac547a8000d) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency shiki-es to ^0.14.0
+
 ## 0.0.5
 
 ### Patch Changes
