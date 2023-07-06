@@ -1,34 +1,22 @@
 import { describe, it, expect } from "vitest";
-import { setup, $fetch } from "@nuxt/test-utils";
-import { Window } from "happy-dom";
+import { setup, createPage } from "@nuxt/test-utils";
 import { fileURLToPath } from "node:url";
 
 describe("example", async () => {
   await setup({
     rootDir: fileURLToPath(new URL("../", import.meta.url)),
+    browser: true,
   });
 
   it("render nodes", async () => {
-    const html = await $fetch("/example");
+    const page = await createPage("/example", {});
 
-    const window = new Window({
-      settings: {
-        disableJavaScriptFileLoading: true,
-        disableJavaScriptEvaluation: true,
-        disableCSSFileLoading: true,
-        disableIframePageLoading: true,
-        enableFileSystemHttpRequests: false,
-      },
-    });
-    const document = window.document;
-    document.body.innerHTML = html;
+    const italic = page.getByTestId("italic");
+    expect(await italic.evaluate((element) => element.tagName)).toBe("EM");
+    expect(await italic.textContent()).toBe("basic");
 
-    const italic = document.querySelector("[data-testid='italic']");
-    expect(italic.tagName).toBe("EM");
-    expect(italic.textContent).toBe("basic");
-
-    const bold = document.querySelector("[data-testid='bold']");
-    expect(bold.tagName).toBe("STRONG");
-    expect(bold.textContent).toBe("tiptap");
-  });
+    const bold = page.getByTestId("bold");
+    expect(await bold.evaluate((element) => element.tagName)).toBe("STRONG");
+    expect(await bold.textContent()).toBe("tiptap");
+  }, 60_000);
 });
