@@ -1,5 +1,11 @@
 # @bicou/nuxt-typography-prosemirror
 
+## 0.1.0
+
+### Minor Changes
+
+- [`80af6b6`](https://github.com/gbicou/nuxt-typography-prosemirror/commit/80af6b63a064901a68c379a0ee821bf54367539f) Thanks [@gbicou](https://github.com/gbicou)! - dependencies upgrade
+
 ## 0.0.8
 
 ### Patch Changes
