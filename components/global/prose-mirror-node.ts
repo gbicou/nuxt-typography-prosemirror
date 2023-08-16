@@ -36,7 +36,7 @@ const ProseMirrorNode = defineComponent<ProseMirrorNodeProperties>({
           markComponent,
           markProperties,
           // recurse the next mark for child
-          () => h(ProseMirrorNode, { node: node.value, mark: markIndex.value + 1 })
+          () => h(ProseMirrorNode, { node: node.value, mark: markIndex.value + 1 }),
         );
       }
       // render text as is
@@ -55,7 +55,7 @@ const ProseMirrorNode = defineComponent<ProseMirrorNodeProperties>({
           proseComponent,
           proseProperties,
           // node content build the children
-          () => node.value.content?.map((child) => h(ProseMirrorNode, { node: child }))
+          () => node.value.content?.map((child) => h(ProseMirrorNode, { node: child })),
         );
       }
     };

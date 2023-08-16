@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "@bicou/nuxt-typography-prosemirror": "workspace:*",
-    "@tiptap/pm": "^2.0.3",
-    "@tiptap/starter-kit": "^2.0.3",
-    "@tiptap/vue-3": "^2.0.3",
+    "@tiptap/pm": "^2.1.0",
+    "@tiptap/starter-kit": "^2.1.0",
+    "@tiptap/vue-3": "^2.1.0",
     "prosemirror-example-setup": "^1.2.2"
   },
   "devDependencies": {
-    "@nuxt-themes/tokens": "^2.0.1"
+    "@nuxt-themes/tokens": "^2.1.1"
   },
   "version": "0.0.7"
 }
