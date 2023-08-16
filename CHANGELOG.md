@@ -1,5 +1,11 @@
 # @bicou/nuxt-typography-prosemirror
 
+## 0.0.8
+
+### Patch Changes
+
+- [`11f72e9`](https://github.com/gbicou/nuxt-typography-prosemirror/commit/11f72e9f294615ad37bf1eae8dd1579537aa46f9) Thanks [@gbicou](https://github.com/gbicou)! - support subscript and superscript
+
 ## 0.0.7
 
 ### Patch Changes
