@@ -41,7 +41,7 @@
     "nuxt": "^3.7.3",
     "playwright": "^1.38.0",
     "prettier": "^3.0.3",
-    "typescript": "~5.1.6",
+    "typescript": "~5.2.0",
     "vitest": "^0.34.4"
   },
   "optionalDependencies": {
