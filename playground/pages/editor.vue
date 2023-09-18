@@ -40,7 +40,7 @@ const json = ref<JsonNode | false>(false);
 
 let state: EditorState = EditorState.create({
   schema: mySchema,
-  plugins: exampleSetup({ schema: mySchema }),
+  plugins: exampleSetup({ schema: mySchema, menuBar: false }),
 });
 let view: EditorView | undefined;
 
