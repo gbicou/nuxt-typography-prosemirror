@@ -15,8 +15,8 @@ importers:
         specifier: ^10.4.1
         version: 10.4.1(nuxt@3.7.3)(rollup@3.28.0)(vue@3.3.4)
       change-case:
-        specifier: ^4.1.2
-        version: 4.1.2
+        specifier: ^5.0.0
+        version: 5.0.1
     optionalDependencies:
       shiki-es:
         specifier: ^0.14.0
@@ -3297,6 +3297,10 @@ packages:
       sentence-case: 3.0.4
       snake-case: 3.0.4
       tslib: 2.6.2
+
+  /change-case@5.0.1:
+    resolution: {integrity: sha512-iQ4vIQKF6hFRAGi3AKnoZPRpYfzj6/Zc4trhe/Ngzlk1FblM573PgfIiccATvQc81oFYub8Z9UY5QSOxsSSQYA==}
+    dev: false
 
   /chardet@0.7.0:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
