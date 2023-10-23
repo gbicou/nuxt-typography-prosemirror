@@ -1,8 +1,7 @@
 module.exports = {
   root: true,
   extends: [
-    "@nuxt/eslint-config",
-    "plugin:unicorn/recommended",
+    "@nuxtjs/eslint-config-typescript",
     "plugin:prettier/recommended"
   ],
   parserOptions: {

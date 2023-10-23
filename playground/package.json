@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "@bicou/nuxt-typography-prosemirror": "workspace:*",
-    "@tiptap/pm": "^2.1.10",
-    "@tiptap/starter-kit": "^2.1.10",
-    "@tiptap/vue-3": "^2.1.10",
+    "@tiptap/pm": "^2.1.12",
+    "@tiptap/starter-kit": "^2.1.12",
+    "@tiptap/vue-3": "^2.1.12",
     "prosemirror-example-setup": "^1.2.2"
   },
   "devDependencies": {

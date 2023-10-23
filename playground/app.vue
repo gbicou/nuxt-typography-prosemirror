@@ -1,18 +1,20 @@
 <template>
-  <nav id="navigation">
-    <router-link to="/">Index</router-link>
-    <router-link to="/example">Example</router-link>
-    <router-link to="/hr">HR</router-link>
-    <router-link to="/image">Image</router-link>
-    <router-link to="/uniqid">UniqID</router-link>
-    <router-link to="/codeblock">CodeBlock</router-link>
-    <router-link to="/ol">OrderedList</router-link>
-    <router-link to="/link">Link</router-link>
-    <router-link to="/table">Table</router-link>
-    <router-link to="/tiptap">TipTap</router-link>
-    <router-link to="/editor">ProseMirror</router-link>
-  </nav>
-  <nuxt-page class="page" />
+  <main>
+    <nav id="navigation">
+      <router-link to="/">Index</router-link>
+      <router-link to="/example">Example</router-link>
+      <router-link to="/hr">HR</router-link>
+      <router-link to="/image">Image</router-link>
+      <router-link to="/uniqid">UniqID</router-link>
+      <router-link to="/codeblock">CodeBlock</router-link>
+      <router-link to="/ol">OrderedList</router-link>
+      <router-link to="/link">Link</router-link>
+      <router-link to="/table">Table</router-link>
+      <router-link to="/tiptap">TipTap</router-link>
+      <router-link to="/editor">ProseMirror</router-link>
+    </nav>
+    <nuxt-page class="page" />
+  </main>
 </template>
 
 <style lang="postcss">
