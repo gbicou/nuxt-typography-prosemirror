@@ -1,5 +1,11 @@
 # @bicou/nuxt-typography-prosemirror
 
+## 0.1.1
+
+### Patch Changes
+
+- [`e4ada7e`](https://github.com/gbicou/nuxt-typography-prosemirror/commit/e4ada7e187185ac9a3fbeaeeb75ef4aec2c2f1f3) Thanks [@gbicou](https://github.com/gbicou)! - dependencies
+
 ## 0.1.0
 
 ### Minor Changes
