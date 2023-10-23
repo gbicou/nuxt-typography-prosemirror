@@ -15,9 +15,9 @@
 </template>
 
 <script setup lang="ts">
-import type { JsonNode } from "../../types";
 import { EditorContent, useEditor } from "@tiptap/vue-3";
-import StarterKit from "@tiptap/starter-kit";
+import { StarterKit } from "@tiptap/starter-kit";
+import type { JsonNode } from "../../types";
 
 const json = ref<JsonNode | false>(false);
 

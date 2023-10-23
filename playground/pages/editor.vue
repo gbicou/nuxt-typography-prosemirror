@@ -18,14 +18,13 @@
 </template>
 
 <script setup lang="ts">
-import type { JsonNode } from "../../types";
-
 import { EditorState } from "prosemirror-state";
 import { EditorView } from "prosemirror-view";
 import { Schema } from "prosemirror-model";
 import { schema } from "prosemirror-schema-basic";
 import { addListNodes } from "prosemirror-schema-list";
 import { exampleSetup } from "prosemirror-example-setup";
+import type { JsonNode } from "../../types";
 
 import "prosemirror-view/style/prosemirror.css";
 import "prosemirror-menu/style/menu.css";
@@ -40,13 +39,13 @@ const json = ref<JsonNode | false>(false);
 
 let state: EditorState = EditorState.create({
   schema: mySchema,
-  plugins: exampleSetup({ schema: mySchema, menuBar: false }),
+  plugins: exampleSetup({ schema: mySchema, menuBar: true }),
 });
 let view: EditorView | undefined;
 
 onMounted(() => {
   view = new EditorView(document.querySelector("#pm-editor"), {
-    state: state,
+    state,
     dispatchTransaction: (transaction) => {
       state = state.apply(transaction);
       view?.updateState(state);

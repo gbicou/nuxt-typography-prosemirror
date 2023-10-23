@@ -1,38 +1,54 @@
 <template>
   <div id="split">
-    <section id="render">
-      <prose-mirror-node :node="json" />
-    </section>
     <section id="data">
       <p>Source:</p>
-      <pre>{{ json }}</pre>
+      <div class="source" v-html="source" />
+    </section>
+    <section id="render">
+      <div class="d">
+        <prose-mirror-node :node="json" />
+      </div>
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
+import { getHighlighter } from "shiki-es";
 import type { JsonNode } from "../../types";
 
-defineProps<{
+const props = defineProps<{
   json: JsonNode;
 }>();
+
+const shiki = await getHighlighter({ theme: "nord", langs: ["json"] });
+
+const source = computed(() => shiki.codeToHtml(JSON.stringify(props.json, null, 2), { lang: "json" }))
 </script>
 
-<style scoped lang="postcss">
+<style scoped>
+:global(pre.shiki) {
+  max-width: 45vw;
+  overflow-x: scroll;
+}
+
 #split {
   display: flex;
   > section {
+    flex-basis: 50%;
     &#render {
-      width: 60ch;
       margin: 0 $dt("space.16");
+
+      .d {
+        position: sticky;
+        top: $dt("space.16");
+      }
     }
 
     &#data {
-      pre {
-        max-width: 120ch;
-        max-height: 80vh;
-        overflow: scroll;
-        font-size: $dt("fontSize.xs");
+      .source {
+        font-size: $dt("fontSize.sm");
+        line-height: $dt("lead.tight");
+        letter-spacing: $dt("letterSpacing.tight");
       }
     }
   }
