@@ -1,5 +1,11 @@
 # @bicou/nuxt-typography-prosemirror
 
+## 0.1.2
+
+### Patch Changes
+
+- [`0497d8d`](https://github.com/gbicou/nuxt-typography-prosemirror/commit/0497d8d0fd4f395c544962838aa8d570deee0605) Thanks [@gbicou](https://github.com/gbicou)! - Remove hash id attribute
+
 ## 0.1.1
 
 ### Patch Changes
