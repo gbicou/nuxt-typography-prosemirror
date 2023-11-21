@@ -26,20 +26,20 @@
   },
   "dependencies": {
     "@nuxt-themes/typography": "^1.0.1",
-    "@vueuse/nuxt": "^10.5.0",
-    "change-case": "^5.1.2"
+    "@vueuse/nuxt": "^10.6.1",
+    "change-case": "^5.2.0"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.2",
+    "@nuxt/test-utils": "^3.8.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@nuxt/test-utils": "^3.8.0",
-    "eslint": "^8.52.0",
+    "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
-    "nuxt": "^3.8.0",
-    "playwright": "^1.39.0",
-    "prettier": "^3.0.3",
+    "nuxt": "^3.8.2",
+    "playwright": "^1.40.0",
+    "prettier": "^3.1.0",
     "typescript": "~5.2.2",
     "vitest": "^0.34.6"
   },
