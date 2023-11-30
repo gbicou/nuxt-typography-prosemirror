@@ -1,3 +1,6 @@
+> **This is now a package of the @bicou/prosemirror-render monorepo :**
+> **https://github.com/gbicou/prosemirror-render**
+
 # @bicou/nuxt-typography-prosemirror
 
 [![npm version][npm-version-src]][npm-version-href]
